@@ -1,6 +1,11 @@
 # mysql-exposer
 expose PCF / TAS hosted mysql database instances externally using tcp-routed service gateway (haproxy)
 
+
+Use a haproxy binary, PCF hosted binary-buildpack staged app and PCF's TCP-Router to expose MySQL database service-instances for consumption directly from outside the platform service network.
+
+
+
 1. Create a p.mysql DB instance in PCF
 
 2. Modify manifest of mysql-exposer to provide unique name for instance
