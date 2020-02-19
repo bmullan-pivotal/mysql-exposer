@@ -1,0 +1,6 @@
+---
+applications:
+- name: mysqlexposer2
+  memory: 512MB
+  buildpacks: 
+  - binary_buildpack
