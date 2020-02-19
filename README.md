@@ -6,6 +6,7 @@ EXPERIMENTAL
 Use a haproxy binary, PCF hosted binary-buildpack staged app and PCF's TCP-Router to expose MySQL database service-instances for consumption directly from outside the platform service network.
 
 How it works
+
 Deploy instance of mysql-exposer as an app to PCF, bind it to your mysql db service instanace and expose it using tcp-route support in PCF.
 The mysql-exposer expects to be bound to a p.mysql service instance.
 On startup a pre-launch script extracts the mysql SI hostname and port and updates the haproxy.conf file 
