@@ -17,15 +17,24 @@ Exposing this app using tcp-router will function to relay traffic to the bound d
 
 1. Create a p.mysql DB instance in PCF
 
+```
+cf create-service p.mysql db-small mysqldb
+```
+
 2. Modify manifest of mysql-exposer to provide unique name for instance
 
+
 3. Push mysql-exposer without a route / without starting
-
+```
 	cf push --no-route --no-start
-
+```
 4. Bind mysql db instance to mysql-exposer app (assumes mysqlexposerxxx is chosen name for pushed instance in manifest.yml)
 
 	cf bind-service mysqlexposerxxx mysqldbname
+```
+cf bs mysqlexposer mysqldb
+```
+
 
 4. Create TCP-ingress Route using PCF's TCP route support (chose a known free port or have tcp router select port for you)
 
